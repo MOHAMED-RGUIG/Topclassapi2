@@ -12,9 +12,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-    origin:["https://topclass1.vercel.app"],
+    origin:["https://lavazzaplatform14.vercel.app"],
     methods:["POST","GET"],
-    credentials:true})););
+    credentials:true}));
 
 const productsRoute = require('./routes/productsRoute');
 const userRoute = require('./routes/userRoute');
