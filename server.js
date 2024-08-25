@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({ origin: https://topclass1.vercel.app/' , // Replace with your frontend's URL
+app.use(cors({ origin: 'https://topclass1.vercel.app/' , // Replace with your frontend's URL
 methods: ['POST','GET'], 
     credentials:true}));
 
