@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({ origin: 'https://topclass1.vercel.app/' , // Replace with your frontend's URL
-methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+methods: ['POST','GET'], 
     credentials:true}));
 
 const productsRoute = require('./routes/productsRoute');
