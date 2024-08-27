@@ -46,7 +46,7 @@ app.post('/send-email', (req, res) => {
     // Setup email data
     let mailOptions = {
         from: process.env.SMPTUSER,
-        to: email.join(', '),
+        to: email,
         subject: subject,
         text: text,
         attachments: [
