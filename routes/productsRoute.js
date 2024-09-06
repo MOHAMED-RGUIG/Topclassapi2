@@ -10,7 +10,8 @@ router.get('/getallproducts', async (req, res) => {
 
         const query = `SELECT [ITMREF_0]
       ,[ITMDES1_0]
-      ,[TSICOD_0]    
+      ,[TSICOD_0]
+      ,[TSICOD_1]     
       ,[PRI_0]
       ,[Designation_Famille_Stat1]   FROM  [topclass_sage].[TCE].[ARTICLE_RESUME] WHERE [TSICOD_0] <>'DET'`;
 
