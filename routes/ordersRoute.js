@@ -52,7 +52,7 @@ router.post('/placeorder', async (req, res) => {
             request.input('rS', sql.NVarChar, rS);
 
             const query = `
-                INSERT INTO topclass.SORDER 
+                INSERT INTO [topclass_ges].[topclass].[SORDER] 
                 (SOHNUM, ORDDAT, BPCORD, ITMREF, ITMDES, QTY, GRAT, NETPRI, TOTLIN, MODPAY, [USER], CREDAT,BPCNAME) 
                 VALUES (@SOHNUM, @dateCmd, @codeClient, @itmref, @itmdes, @qty, @grat, @netpri, @totlin, @modalitePai, @userID, GETDATE(),@rS)
             `;
@@ -90,7 +90,7 @@ router.post('/getuserorders', async (req, res) => {
         request.input('userid', sql.Int, currentUser.ID);
 
         const query = `
-            SELECT * FROM topclass.SORDER WHERE [USER] = @userid
+            SELECT * FROM [topclass_ges].[topclass].[SORDER] WHERE [USER] = @userid
         `;
 
         const result = await request.query(query);
