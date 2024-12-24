@@ -15,7 +15,7 @@ router.post('/placeorder', async (req, res) => {
 
         const counterQuery = `
             SELECT MAX(CAST(SUBSTRING(SOHNUM, 10, LEN(SOHNUM)) AS INT)) AS maxCounter
-            FROM topclass.SORDER
+            FROM [topclass_ges].[topclass].[SORDER]
             WHERE SUBSTRING(SOHNUM, 5, 2) = @month AND SUBSTRING(SOHNUM, 7, 2) = @year
         `;
         const result = await pool.request()
